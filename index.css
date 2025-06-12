@@ -1,0 +1,175 @@
+/* ====== Estilos Globales ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #B9E7F7;
+}
+
+/* ====== Encabezado ====== */
+header {
+  background: #8DC7F7;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo a la izquierda, menú centrado */
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+.logo-img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* ====== Menú ====== */
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-item a {
+  text-decoration: none;
+}
+.icon {
+  max-width: 40px;
+  height: auto;
+}
+.menu-btn {
+  margin-top: 4px;
+  padding: 6px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.menu-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ====== Contenido Principal ====== */
+.content {
+  padding: 60px 20px 20px; /* espacio superior para header fijo */
+  text-align: center;
+}
+.welcome-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: inline-block;
+  width: 90%;
+  max-width: 600px;
+}
+.welcome-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.purchase-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.purchase-container {
+  margin-top: 20px;
+}
+.purchase-btn {
+  padding: 12px 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.purchase-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: #8DC7F7;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ====== Botón flotante de WhatsApp ====== */
+/* Ajustamos bottom para que esté más arriba, y tamaño más grande */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 80px; /* elevamos el botón más arriba desde la base */
+  right: 20px;
+  z-index: 1000;
+  display: block;
+  animation: floatIn 0.5s ease-out;
+}
+.whatsapp-fixed-logo {
+  width: 80px;   /* tamaño aumentado para mejor visibilidad */
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-fixed-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Animación sutil de aparición */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ====== Adaptaciones Responsive ====== */
+@media (max-width: 600px) {
+  .logo-img {
+    max-width: 120px;
+  }
+  .menu {
+    gap: 10px;
+  }
+  .icon {
+    max-width: 30px;
+  }
+  .menu-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  /* En móviles, colocamos el botón un poco más arriba si es necesario */
+  .whatsapp-fixed {
+    bottom: 60px; /* se sube un poco para no chocar con barras o gestos */
+  }
+  .whatsapp-fixed-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
