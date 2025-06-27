@@ -1,0 +1,383 @@
+/* Para que html y body ocupen todo el alto */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #003366;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenido principal */
+.content {
+  padding: 100px 20px 40px;
+  text-align: center;
+  flex: 1;
+  background: #fff;
+  color: #003366;
+  animation: slideInContent 1.2s ease;
+}
+
+/* Header */
+/* Si usas el header.php con su propio style no hace falta esto,
+   o si quieres, puedes borrar el style del header.php y dejar solo este */
+/* background: rgba(255, 102, 0, 0.9); */
+/* padding: 20px 30px; */
+/* display: flex; */
+/* align-items: center; */
+/* justify-content: space-between; */
+/* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+/* position: sticky; */
+/* top: 0; */
+/* z-index: 1000; */
+/* backdrop-filter: blur(6px); */
+
+/* Logo */
+.logo-img {
+  max-width: 200px;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  max-width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.menu-btn {
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #cc5200;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #003366;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  padding: 10px 15px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 999;
+}
+
+.menu-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #003366;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f8ff;
+  border-radius: 5px;
+}
+
+/* Contenido welcome */
+.welcome-container {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+  animation: fadeInLeft 1.4s ease;
+}
+
+.titulo-img {
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.purchase-text {
+  font-size: 18px;
+}
+
+.purchase-container {
+  margin-top: 20px;
+}
+
+.purchase-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.purchase-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #fff3e0;
+  padding: 20px;
+  text-align: center;
+  color: #cc6600;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* WhatsApp flotante */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  animation: zoomIn 1.2s ease;
+}
+
+.whatsapp-fixed-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-fixed-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Círculo verde */
+.circulo-verde {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #88b04b, #f4a261);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: auto;
+}
+
+.circulo-verde .fondo-interno {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #ff6600, #ffcc80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+/* Animaciones */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 80px 15px 30px;
+  }
+
+  .logo-img {
+    max-width: 140px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .icon {
+    max-width: 45px;
+  }
+
+  .menu-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .titulo-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .welcome-container {
+    margin: 20px 10px;
+    padding: 25px 15px;
+    box-sizing: border-box;
+  }
+
+  .description,
+  .purchase-text {
+    font-size: 16px;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .whatsapp-fixed-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .circulo-verde {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circulo-verde .fondo-interno {
+    width: 60px;
+    height: 60px;
+    font-size: 0.9em;
+  }
+}
+
+/* --------------------------------------------- */
+/* Estilos personalizados para compras.php */
+
+.step-title {
+  font-size: 2.2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff6600;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.instruction {
+  font-size: 1.3em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.carton-text {
+  font-size: 1.2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #003366;
+  margin: 10px 0;
+}
+
+.select-btn {
+  padding: 18px 50px;
+  font-size: 1.5em;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff6600, #ff3300);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.select-btn:hover {
+  background: linear-gradient(to right, #ff8533, #ff471a);
+  transform: scale(1.05);
+}
+
+/* Responsive para compras.php */
+@media (max-width: 768px) {
+  .step-title {
+    font-size: 1.6em;
+  }
+  .instruction {
+    font-size: 1.1em;
+  }
+  .carton-text {
+    font-size: 1em;
+  }
+  .select-btn {
+    font-size: 1.3em;
+    padding: 16px 40px;
+  }
+}

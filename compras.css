@@ -1,0 +1,118 @@
+/* Estilo profesional para la sección de compras */
+
+.step-title {
+    font-size: 3em; /* más grande */
+    color: #003366;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 3px #bbb;
+    opacity: 0;
+    animation: fadeInSlow 2.5s forwards;
+}
+
+.instruction {
+    font-size: 1.6em; /* más grande */
+    color: #222;
+    text-align: center;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    animation: fadeInSlow 2.5s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Contenedor con fondo suave y sombra */
+.carton-selection {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.carton-info {
+    background: #ffffffdd; /* blanco semi-transparente */
+    padding: 45px 40px; /* más grande */
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+    text-align: center;
+    max-width: 460px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInSlow 2.5s forwards;
+    animation-delay: 1s;
+}
+
+.carton-text {
+    font-size: 1.3em; /* más grande */
+    color: #005577;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+/* Botón moderno con efecto 3D, sombra y color que combine */
+.select-btn {
+    margin-top: 35px;
+    padding: 22px 60px; /* más grande */
+    font-size: 1.7em; /* más grande */
+    font-weight: 900;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(145deg, #004a99, #007acc); /* tonos azules que combinan con fondo */
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 122, 204, 0.6);
+    transition: all 0.5s ease; /* efecto más lento */
+    opacity: 0;
+    animation: fadeInSlow 2.5s forwards;
+    animation-delay: 1.5s;
+}
+
+.select-btn:hover {
+    transform: scale(1.07);
+    background: linear-gradient(145deg, #0066cc, #3399ff);
+    box-shadow: 0 12px 30px rgba(51, 153, 255, 0.7);
+}
+
+/* Animación lenta y profesional */
+@keyframes fadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 600px) {
+    .step-title {
+        font-size: 2.2em;
+    }
+
+    .instruction {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .carton-info {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+
+    .carton-text {
+        font-size: 1.1em;
+    }
+
+    .select-btn {
+        width: 100%;
+        font-size: 1.4em;
+        padding: 18px;
+        border-radius: 50px;
+    }
+}

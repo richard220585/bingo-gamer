@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pago-cuadro {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pago-cuadro p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.pago-cuadro strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.datos-bancarios p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.pago-titulo {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formulario-pago {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulario-pago label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.formulario-pago input[type="text"],
+.formulario-pago input[type="email"],
+.formulario-pago input[type="file"] {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bb2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-btn:hover {
+    background-color: #005b87;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .pago-cuadro {
+        padding: 15px;
+    }
+
+    .formulario-pago button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
