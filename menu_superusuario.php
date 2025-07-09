@@ -95,6 +95,7 @@ if (!isset($_SESSION['superusuario'])) {
     <a class="menu-button" href="carton_habilitar.php">🎮 Habilitar Cartones</a>
     <a class="menu-button" href="principal_ganador.php">🏆 Ver Ganadores</a>
     <a class="menu-button" href="precio_carton.php">💲 Precio de Cartón</a>
+    <a class="menu-button" href="consulta.php">📊 Consulta de Ventas</a> <!-- NUEVO BOTÓN -->
 
     <div class="logout">
         <a href="cerrar.php">Cerrar sesión</a>
